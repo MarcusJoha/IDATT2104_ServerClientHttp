@@ -21,6 +21,7 @@ public class Client {
             String line;
 
             do {
+
                 System.out.print("\nEnter a number: ");
                 line = sc.nextLine(); // hopper over denne av en eller annen grunn
                 toSend.println(line); // sends through socket inputstream to server
@@ -30,12 +31,11 @@ public class Client {
                 toSend.println(line);
 
                 System.out.print("Enter an operator (+ or -): ");
-                line = sc.next();
+                line = sc.nextLine();
                 toSend.println(line);
 
                 if (!line.equals("")) {
                     answerFromServer = receivedFromServer.readLine(); // received from server
-
                     System.out.println("Response from server: " + answerFromServer);
                 }
 

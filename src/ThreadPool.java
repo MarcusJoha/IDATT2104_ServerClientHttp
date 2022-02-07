@@ -29,9 +29,12 @@ public class ThreadPool extends Thread {
 
                 System.out.println("Client input: " + n1 + operator + n2);
 
+                /*
                 if (n1.equals("") || n2.equals("") || operator.equals("")) {
                     break;
                 }
+                 */
+
                 try {
                     Thread.sleep(3_000);
                 } catch (InterruptedException e) {
