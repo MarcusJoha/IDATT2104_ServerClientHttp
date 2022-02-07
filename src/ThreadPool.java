@@ -19,7 +19,7 @@ public class ThreadPool extends Thread {
 
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            PrintWriter output = new PrintWriter(socket.getOutputStream(), true); // just to se if data from client was recieved
+            PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
 
             while (true) {
 
@@ -41,12 +41,10 @@ public class ThreadPool extends Thread {
                     System.out.println("Thread was interrupted: " + e.getMessage());
                 }
 
-                /*
-                Her må vi behandle data som vi får fra client
-                 */
+                // Handle the data from the client
                 int answer = calculate(n1, n2, operator);
 
-                output.println(answer); // skal sende svar tilbake
+                output.println(answer); // send answer back to client
             }
 
         } catch (IOException e) {

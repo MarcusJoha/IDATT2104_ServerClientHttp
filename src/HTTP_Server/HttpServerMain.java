@@ -35,6 +35,7 @@ public class HttpServerMain {
 
  */
                 OutputStream output = socket.getOutputStream();
+                // HTML code
                 output.write("HTTP/1.1 200 OK\r\n".getBytes());
                 output.write("Content-Type: text/html;charset=utf-8\r\n".getBytes());
                 output.write("\r\n".getBytes());

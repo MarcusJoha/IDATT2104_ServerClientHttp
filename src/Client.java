@@ -22,8 +22,12 @@ public class Client {
 
             do {
 
+                /*
+                Burde se litt mer på exception handling her
+                 */
+
                 System.out.print("\nEnter a number: ");
-                line = sc.nextLine(); // hopper over denne av en eller annen grunn
+                line = sc.nextLine();
                 toSend.println(line); // sends through socket inputstream to server
 
                 System.out.print("Enter a new number: ");
