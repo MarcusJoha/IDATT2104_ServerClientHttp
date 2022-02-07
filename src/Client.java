@@ -16,30 +16,30 @@ public class Client {
             PrintWriter toSend = new PrintWriter(socket.getOutputStream(), true);
 
             Scanner sc = new Scanner(System.in);
-            String n1;
-            String n2;
-            String operator;
             String answerFromServer;
 
+            String line;
+
             do {
-                System.out.println("\nEnter a number: ");
-                n1 = sc.nextLine();
-                System.out.println("Enter a new number: ");
-                n2 = sc.nextLine();
-                System.out.println("Enter an operator (+ or -): ");
-                operator = sc.next();
+                System.out.print("\nEnter a number: ");
+                line = sc.nextLine(); // hopper over denne av en eller annen grunn
+                toSend.println(line); // sends through socket inputstream to server
 
-                toSend.println(n1); // sends through socket inputstream to server
-                toSend.println(n2);
-                toSend.println(operator);
+                System.out.print("Enter a new number: ");
+                line = sc.nextLine();
+                toSend.println(line);
 
-                if (!operator.equals("")) {
+                System.out.print("Enter an operator (+ or -): ");
+                line = sc.next();
+                toSend.println(line);
+
+                if (!line.equals("")) {
                     answerFromServer = receivedFromServer.readLine(); // received from server
 
                     System.out.println("Response from server: " + answerFromServer);
                 }
 
-            } while (!operator.equals(""));
+            } while (!line.equals(""));
 
 
         } catch (IOException e) {

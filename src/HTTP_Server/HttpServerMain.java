@@ -40,7 +40,7 @@ public class HttpServerMain {
                 output.write("\r\n".getBytes());
                 output.write("<html>".getBytes());
                 output.write("<body>".getBytes());
-                output.write("<h1>Vær pilset, du er koblet deg opp til min enkle web-tjener</h1>".getBytes());
+                output.write("<h1>Vær pilset, du har koblet deg opp til min enkle web-tjener</h1>".getBytes());
                 output.write("<h3>Dette er min header</h3>".getBytes());
                 output.write("<ul>".getBytes());
 
