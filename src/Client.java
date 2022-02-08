@@ -18,25 +18,34 @@ public class Client {
             Scanner sc = new Scanner(System.in);
             String answerFromServer;
 
-            String line;
+            String line = "";
 
             do {
-
                 /*
                 Burde se litt mer på exception handling her
                  */
 
-                System.out.print("\nEnter a number: ");
-                line = sc.nextLine();
-                toSend.println(line); // sends through socket inputstream to server
+                try {
+                    System.err.println("\nWrite an empty input if you want to quit");
+                    System.out.print("Enter a number: ");
+                    line = sc.nextLine();
+                    int lineNum = Integer.parseInt(line); // just to throw an error
+                    toSend.println(line); // sends through socket inputstream to server
 
-                System.out.print("Enter a new number: ");
-                line = sc.nextLine();
-                toSend.println(line);
+                    System.out.print("Enter a new number: ");
+                    line = sc.nextLine();
+                    lineNum = Integer.parseInt(line);
+                    toSend.println(line);
 
-                System.out.print("Enter an operator (+ or -): ");
-                line = sc.nextLine();
-                toSend.println(line);
+                    System.out.print("Enter an operator (+ or -): ");
+                    line = sc.nextLine();
+                    toSend.println(line);
+
+                } catch (NumberFormatException e) {
+                    if (line.equals("")) break;
+                    System.out.println("Wrong input try again");
+                    continue;
+                }
 
                 if (!line.equals("")) {
                     answerFromServer = receivedFromServer.readLine(); // received from server
