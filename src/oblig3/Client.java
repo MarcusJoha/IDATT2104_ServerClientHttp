@@ -1,3 +1,5 @@
+package oblig3;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,10 +23,7 @@ public class Client {
             String line = "";
 
             do {
-                /*
-                Burde se litt mer på exception handling her
-                 */
-
+                // try block to catch and handle exception
                 try {
                     System.err.println("\nWrite an empty input if you want to quit");
                     System.out.print("Enter a number: ");

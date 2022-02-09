@@ -1,4 +1,4 @@
-package HTTP_Server;
+package oblig3.HTTP_Server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
