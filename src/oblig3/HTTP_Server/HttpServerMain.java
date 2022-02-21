@@ -56,7 +56,7 @@ public class HttpServerMain {
                 output.write("</body>".getBytes());
                 output.write("</html>".getBytes());
                 output.flush();
-                System.err.println("Client connection is closed");
+                System.err.println("oblig4.Client connection is closed");
 
                 br.close();
                 socket.close();

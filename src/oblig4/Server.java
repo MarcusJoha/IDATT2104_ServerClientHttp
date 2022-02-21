@@ -1,8 +1,7 @@
-/*
+package oblig4;/*
 oppg 1. UDP server
  */
 
-import javax.script.ScriptEngineManager;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

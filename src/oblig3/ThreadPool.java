@@ -29,7 +29,7 @@ public class ThreadPool extends Thread {
                 String n2 = input.readLine();
                 String operator = input.readLine();
 
-                System.out.println("Client input: " + n1 + operator + n2);
+                System.out.println("oblig4.Client input: " + n1 + operator + n2);
 
                 /*
                 if (n1.equals("") || n2.equals("") || operator.equals("")) {

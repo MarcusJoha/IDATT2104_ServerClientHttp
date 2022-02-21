@@ -22,7 +22,7 @@ public class Server {
             }
 
         } catch (IOException e) {
-            System.out.println("Server exception: " + e.getMessage());
+            System.out.println("oblig4.Server exception: " + e.getMessage());
         }
     }
 }
