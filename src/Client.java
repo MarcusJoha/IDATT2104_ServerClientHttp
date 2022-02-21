@@ -1,5 +1,3 @@
-package oblig4;
-
 /*
 Client for UDP server
  */
@@ -26,15 +24,14 @@ public class Client {
 
                 // Send and equation to Server (UDP connection)
                 System.out.println("Write an equation: ");
+
                 equation = sc.nextLine();
-
                 byte[] buffer = equation.getBytes();
-
-                DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 5020);
+                DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 5030);
                 socket.send(packet);
 
-                // receive Answer back from Server
-                byte[] receivedBuffer = new byte[40];
+                 // receive Answer back from Server
+                byte[] receivedBuffer = new byte[256];
                 packet = new DatagramPacket(receivedBuffer, 0, receivedBuffer.length);
                 socket.receive(packet);
                 receivedFromServer = new String(receivedBuffer,0, packet.getLength());
